@@ -1,0 +1,89 @@
+#!/bin/bash -x
+
+#keys
+month1=January;
+month2=Febraury;
+month3=March;
+month4=April;
+month5=May;
+month6=June;
+month7=july;
+month8=August;
+month9=September;
+month10=October;
+month11=November;
+month12=December;
+#variables
+count1=0
+count2=0
+count3=0
+count4=0
+count5=0
+count6=0
+count7=0
+count8=0
+count9=0
+count10=0
+count11=0
+count12=0
+#decleartion of dictionary
+declare -A birthdays
+#for loop
+for((i=1;i<=50;i++))
+do
+	birthdaymonth=$(($RANDOM%12+1))
+	case $birthdaymonth in
+		1)
+			((count1++))
+			birthdays[$month1]=$count1
+			;;
+		2)
+         ((count2++))
+         birthdays[$month2]=$count2
+			;;
+		3)
+         ((count3++))
+         birthdays[$month3]=$count3
+			;;			
+		4)
+         ((count4++))
+         birthdays[$month4]=$count4
+			;;
+		5)
+         ((count5++))
+         birthdays[$month5]=$count5
+			;;		
+		6)
+         ((count6++))
+         birthdays[$month6]=$count6
+			;;
+		7)
+         ((count7++))
+         birthdays[$month7]=$count7
+			;;
+		8)
+         ((count8++))
+         birthdays[$month8]=$count8
+			;;
+		9)
+         ((count9++))
+         birthdays[$month9]=$count9
+			;;
+		10)
+         ((count10++))
+         birthdays[$month10]=$count10
+			;;
+		11)
+         ((count11++))
+         birthdays[$month11]=$count11
+			;;
+		12)
+         ((count12++))
+         birthdays[$month12]=$count12
+			;;
+esac
+done
+for((itr=1;itr<=12;itr++))
+do
+	echo "[${!birthdays[$i]} : ${birthdays[month$i]}]"
+done
