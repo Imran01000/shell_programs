@@ -1,27 +1,28 @@
 #!/bin/bash -x
+#To find wheather the given two numbers are palindrome or not.
 function ispalindrome(){
-        temp=$n
-        sum=0;
-	while ((n>0))
+	temp=$number
+	sum=0;
+	while (($number>0))
 	do
-		r=$(($n%10));
-		sum=$(( $(($sum*10))+$r));
-		n=$(($n/10));
+		remainder=$(($number%10));
+		sum=$(( $(($sum*10))+$remainder));
+		number=$(($n/10));
 		
 	done
-	if (( $temp==$sum))
+	if (($temp==$sum))
 	then
 		echo "It is palindrome"
 	else
-		echo "not palindrome";
+		echo "Not palindrome";
 	fi
 }
 
 echo "Enter the first number";
-read n;
-result1="$(ispalindrome  $n)";
-echo $result1;
+read number;
+result="$(ispalindrome  $number)";
+echo $result;
 echo "Enter the second number";
-read n;
-result1="$(ispalindrome $n)";
-echo $result1;
+read number;
+result="$(ispalindrome $number)";
+echo $result;
