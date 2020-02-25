@@ -21,30 +21,30 @@ do
 	dicenumber=$(($RANDOM%6+1))
 #case selection
 	case $dicenumber in
-					1)
-						((count1++));
-						roll[$key1]=$count1
-						;;
-					2)	
-						((count2++));
-						roll[$key2]=$count2
-						;;
-					3)
-						((count3++));
-						roll[$key3]=$count3
-						;;
-					4)
-                  ((count4++));
-                  roll[$key4]=$count4
-                  ;;
-					5)
-                  ((count5++));
-                  roll[$key5]=$count5
-                  ;;
-					6)
-                  ((count6++));
-                  roll[$key6]=$count6
-                  ;;
+		1)
+		((count1++));
+		roll[$key1]=$count1	
+		;;
+		2)	
+		((count2++));
+		roll[$key2]=$count2
+		;;
+		3)
+		((count3++));
+		roll[$key3]=$count3
+		;;	
+		4)
+		((count4++));
+		roll[$key4]=$count4
+		;;	
+		5)	
+		((count5++));
+		roll[$key5]=$count5
+		;;
+		6)
+		((count6++));
+		roll[$key6]=$count6
+		;;
 esac
 if (($count1==10 || $count2==10 || $count3==10 || $count4==10 || $count5==10 || $count6==10))
 then 
